@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app4
+  labels:
+    app: my-app4
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-app4
+  template:
+    metadata:
+      labels:
+        app: my-app4
+    spec:
+      containers:
+      - name: udagram-api
+        image: abythell74/udagram-api
+        ports:
+        - containerPort: 80
+

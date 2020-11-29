@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-app5
+  labels:
+    run: my-app5
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+  selector:
+    run: my-app5
+
